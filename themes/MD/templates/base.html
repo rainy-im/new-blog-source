@@ -4,6 +4,7 @@
     {% block head %}
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Bootstrap core css -->
     <link rel="stylesheet" href="/theme/css/bootstrap-paper.min.css">
     <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
@@ -18,15 +19,15 @@
 <body id="index">
 <div class="container main-container">
     <div class="row main-row">
-        <section id="side-bar" class="col-md-4 visible-md-block visible-lg-block">
+        <section id="side-bar" class="col-md-4">
             <ul class="name-card">
                 <li>
                     <a href="https://github.com/rainy-im" title="My Github">
                         <img class="avatar" src="https://avatars0.githubusercontent.com/u/3953966?v=3&s=460"/>
                     </a>
                 </li>
-                <li class="name-card-name"><b>Rainy.im</b></li>
-                <li class="name-card-slogan"><i>I thought, therefore I write.</i></li>
+                <li class="name-card-name"><b>{{ AUTHOR }}</b></li>
+                <li class="name-card-slogan"><i>Terefore I am.</i></li>
                 <li class="divider"></li>
             </ul>
             <form class="side-search" onsubmit="return search()">
@@ -52,17 +53,17 @@
             </ul>
         </section>
         <!--left side-->
-        <section class="col-md-8">
+        <section class="col-md-8 col-sm-12 col-xs-12">
             {% block content %}
             {% endblock %}
         </section>
         <!--main content-->
     </div>
-    <footer id="contentinfo" class="row">
-        <address id="about" class="col-md-12">
-            Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-            Theme based on <a href="http://bootswatch.com/paper">Bootstrap paper</a>.
-        </address>
+    <footer id="contentinfo">
+        <p>
+            Powered by <a href="http://getpelican.com/">Pelican</a>,
+            Created by <a href="http://rainy.im">rainy.im</a>.
+        </p>
     </footer>
 </div>
 
