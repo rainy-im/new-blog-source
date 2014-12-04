@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block breadcrumb %}
+<ul class="post-info breadcrumb">
+    <li><a href="/" title="Home">Home</a></li>
+    <li>
+        <a href="/tags.html" title="tags">
+            Tag
+        </a>
+    </li>
+    <li class="">
+        {{ tag }}
+    </li>
+</ul>
+{% endblock %}

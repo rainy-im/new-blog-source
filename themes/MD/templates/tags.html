@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - Tags{% endblock %}
+
+{% block content %}
+{% block breadcrumb %}
+<ul class="post-info breadcrumb">
+    <li><a href="/" title="Home">Home</a></li>
+    <li class="active">
+        Tags
+    </li>
+</ul>
+{% endblock %}
+<ul class="nav nav-pills tag-list">
+    {%- for tag, articles in tags|sort %}
+    <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <span class="badge">{{ articles|count }}</span></a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

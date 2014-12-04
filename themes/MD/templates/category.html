@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block breadcrumb %}
+<ul class="post-info breadcrumb">
+    <li><a href="/" title="Home">Home</a></li>
+    <li>
+        <a href="/categories.html" title="categories">
+            Category
+        </a>
+    </li>
+    <li class="">
+        {{ category }}
+    </li>
+</ul>
+{% endblock %}

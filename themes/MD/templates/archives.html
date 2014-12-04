@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% block breadcrumb %}
+<ul class="post-info breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li class="active">
+        Archives
+    </li>
+</ul>
+{% endblock breadcrumb %}
+<dl class="archive-list">
+    {% for article in dates %}
+    <dt>{{ article.locale_date }}</dt>
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+    {% endfor %}
+</dl>
+{% endblock %}

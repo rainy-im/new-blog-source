@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block head %}
+{% for keyword in article.keywords %}
+<meta name="keywords" contents="{{keyword}}"/>
+{% endfor %}
+
+{% for description in article.description %}
+<meta name="description" contents="{{description}}"/>
+{% endfor %}
+
+{% for tag in article.tags %}
+<meta name="tags" contents="{{tag}}"/>
+{% endfor %}
+{{ super() }}
+
+{% endblock %}
+
+{% block content %}
+<section id="content" class="body col-md-8">
+    {% block breadcrumb %}
+    <ul class="post-info breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li>
+            <a href="{{ article.category.url }}" title="{{ article.category }}" alt="{{ article.category }}">
+                {{ article.category }}
+            </a>
+        </li>
+        <li class="active">
+            {{ article.locale_date }}
+        </li>
+    </ul>
+    {% endblock breadcrumb %}
+    <!-- /.post-info -->
+
+    <header>
+        <h4 class="entry-title">
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+               title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+        </h4>
+    </header>
+
+    <div class="entry-content">
+        {{ article.content }}
+    </div>
+    <!-- /.entry-content -->
+</section>
+{% endblock %}
