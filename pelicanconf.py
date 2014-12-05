@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'\u96e8\u751f'
+AUTHOR = u'rainy'
 SITENAME = u'it\'s rainy here'
-SITEURL = ''
+SITEURL = 'http://0.0.0.0:8080'
 
 PATH = 'content'
 
@@ -46,5 +46,5 @@ TEMPLATE_PAGES = {"/Users/rainy/Projects/Blog/pelican.rainy.im/themes/MD/templat
 #RELATIVE_URLS = True
 
 # Plugins
-PLUGIN_PATH = "plugins"
+PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["neighbors"]
