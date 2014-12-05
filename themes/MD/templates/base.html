@@ -5,15 +5,22 @@
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
+          title="{{ SITENAME }} Full Atom Feed"/>
+    {% endif %}
+    <link rel="shortcut icon" href="/theme/image/fav-r.png" />
     <!-- Bootstrap core css -->
     <link rel="stylesheet" href="/theme/css/bootstrap-paper.min.css">
     <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="/theme/css/github.css">
     <link rel="stylesheet" href="/theme/css/style.css">
+    <link rel="stylesheet" href="/theme/css/lightbox.css">
 
     <!-- Jquery before bootstrap.js -->
     <script src="/theme/js/jquery.min.js"></script>
     <script src="/theme/js/bootstrap.min.js"></script>
+    <script src="/theme/js/lightbox.js"></script>
     {% endblock head %}
 </head>
 
@@ -24,32 +31,35 @@
             <ul class="name-card">
                 <li>
                     <a href="https://github.com/rainy-im" title="My Github">
-                        <img class="avatar" src="https://avatars0.githubusercontent.com/u/3953966?v=3&s=460"/>
+                        <img class="avatar" src="/theme/image/avatar.png"/>
                     </a>
                 </li>
-                <li class="name-card-name"><b>{{ AUTHOR }}</b></li>
-                <li class="name-card-slogan"><i>Terefore I am.</i></li>
+                <li class="name-card-name"><b>rainy.im</b></li>
+                <li class="name-card-slogan"><i>therefore I am.</i></li>
                 <li class="divider"></li>
             </ul>
             <form class="side-search" onsubmit="return search()">
-                <input id="search-query" type="text" class="form-control" placeholder="Search">
+                <input id="search-query" type="text" class="form-control" placeholder="">
             </form>
             <ul class="nav nav-sidebar">
                 <li><a href="/">Home</a></li>
                 <li><a href="/archives.html">Archive</a></li>
                 <li><a href="/categories.html">Category</a></li>
                 <li><a href="/tags.html">Tags</a></li>
-                <li><a href="">RSS</a></li>
+                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a></li>
             </ul>
             <ul class="sns">
                 <li>
-                    <a href="mailto:sniky.hack@gmail.com" title="email" class="fa fa-send"></a>
+                    <a href="mailto:rainy@zju.edu.cn" title="email" class="fa fa-send"></a>
                 </li>
                 <li>
                     <a href="http://weibo.com/myaplysia" title="Weibo" alt="Weibo" class="fa fa-weibo"></a>
                 </li>
                 <li>
                     <a href="https://github.com/rainy-im" title="Github" alt="Github" class="fa fa-github"></a>
+                </li>
+                <li>
+                    <a href="/about" title="About me" alt="About me" class="fa fa-graduation-cap"></a>
                 </li>
             </ul>
         </section>

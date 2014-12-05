@@ -25,6 +25,20 @@ a:hover, a:focus {
     margin-bottom: 0px;
 }
 
+p > a > img {
+    padding: 4px;
+    line-height: 1.846;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
 .avatar {
     width: 100px;
     height: 100px;
@@ -180,4 +194,20 @@ pre {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 
 }
+div.asset-footer{
+    margin-top: 40px;
+}
+div.end-article {
+    text-align: right;
+    padding: 20px;
+    color: #db5e63;
+    font-weight: 900;
+}
 
+div.neighbors > ul.pager > li.prev {
+    float: left;
+}
+
+div.neighbors > ul.pager > li.next {
+    float: right;
+}
