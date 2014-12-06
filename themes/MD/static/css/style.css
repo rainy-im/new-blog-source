@@ -180,6 +180,12 @@ ul.tag-list > li {
     }
 }
 
+@media (max-width: 768px) {
+    div.asset-footer > div.panel-body {
+        display: none;
+    }
+}
+
 /* Codes */
 pre {
     background-color: #fff;
@@ -194,9 +200,11 @@ pre {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 
 }
-div.asset-footer{
+
+div.asset-footer {
     margin-top: 40px;
 }
+
 div.end-article {
     text-align: right;
     padding: 20px;
