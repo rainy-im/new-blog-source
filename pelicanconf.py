@@ -46,6 +46,6 @@ TEMPLATE_PAGES = {"/Users/rainy/Projects/Blog/pelican.rainy.im/themes/MD/templat
 #RELATIVE_URLS = True
 
 # Plugins
-PLUGIN_PATH = "plugins"
+# PLUGIN_PATH = "plugins"
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["neighbors"]

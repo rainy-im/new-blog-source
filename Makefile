@@ -9,7 +9,7 @@ PUBOUTDIR=/Users/rainy/Projects/Blog/rainy.im
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-PROJECT=$(BASEDIR)/projects
+PROJECT=$(BASEDIR)/projects/*
 IMG=$(BASEDIR)/images
 
 FTP_HOST=localhost
@@ -58,7 +58,7 @@ help:
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-	#cp -r $(PROJECT) $(OUTPUTDIR)
+	cp -r $(PROJECT) $(OUTPUTDIR)
 	#cp -r $(IMG) $(OUTPUTDIR)
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
@@ -87,7 +87,7 @@ stopserver:
 
 pub:
 	$(PELICAN) $(INPUTDIR) -o $(PUBOUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
-	#cp -r $(PROJECT) $(PUBOUTDIR)
+	cp -r $(PROJECT) $(PUBOUTDIR)
 	#cp -r $(IMG) $(PUBOUTDIR)
 
 ssh_upload: publish
