@@ -3,17 +3,19 @@
 {% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
 
 {% block head %}
-{% for keyword in article.keywords %}
-<meta name="keywords" contents="{{keyword}}"/>
-{% endfor %}
 
-{% for description in article.description %}
-<meta name="description" contents="{{description}}"/>
-{% endfor %}
+{% if article.keywords%}
+  <meta name="keywords" contents="{{article.keywords}}"/>
+{% endif %}
+
+{% if article.description %}
+  <meta name="description" contents="{{article.description}}"/>
+{% endif %}
 
 {% for tag in article.tags %}
-<meta name="tags" contents="{{tag}}"/>
+  <meta name="tags" contents="{{tag}}"/>
 {% endfor %}
+  <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}" />
 
 {{ super() }}
 
