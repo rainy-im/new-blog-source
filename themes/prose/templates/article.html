@@ -26,32 +26,27 @@
 {% block content %}
 <section id="content" class="body col-md-8">
     {% block breadcrumb %}
-    <ul class="post-info breadcrumb">
+    <ul class="am-breadcrumb am-breadcrumb-slash">
         <li><a href="/">Home</a></li>
         <li>
             <a href="/{{ article.category.url }}" title="{{ article.category }}" alt="{{ article.category }}">
                 {{ article.category }}
             </a>
         </li>
-        <li class="active">
-            {{ article.locale_date }}
+        <li class="am-active">
+            {{ article.title }}
         </li>
     </ul>
     {% endblock breadcrumb %}
     <!-- /.post-info -->
 
-    <header>
-        <h1 class="entry-title">
-            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-               title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-        </h1>
-    </header>
-
     <div class="entry-content">
         {{ article.content }}
     </div>
+    <div class="end-article"><b>- END -</b></div>
     <!-- /.entry-content -->
-    <div class="asset-footer panel panel-primary">
+    <hr data-am-widget="divider" style="" class="am-divider am-divider-default"/>
+    <div class="asset-footer am-alert">
         <div class="panel-heading">
             <h3 class="panel-title">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-非商用-非衍生-保持署名</a>
             </h3>
@@ -60,35 +55,37 @@
             原文网址：<a href="{{ SITEURL }}/{{ article.url }}">{{ SITEURL }}/{{ article.url }}</a>
         </div>
     </div>
-    <div class="end-article">- END -</div>
+    {% if 1 %}
     <div class="neighbors">
         <ul class="pager">
             {% if article.prev_article %}
-            <li class="prev">
+            <li class="prev am-pagination-prev">
                 <a href="{{ SITEURL }}/{{ article.prev_article.url}}" rel="prev" title="prev post">
-                    <i class="fa fa-chevron-left"></i> {{ article.prev_article.title }}
+                  &lArr; {{ article.prev_article.title }}
                 </a>
             </li>
             {% else %}
-            <li class="prev disabled">
-                <a href="#">已经是第一篇</a>
+            <li class="prev .am-disabled">
+                已经是第一篇
             </li>
             {% endif %}
             {% if article.next_article %}
-            <li class="next">
+            <li class="next am-pagination-next">
                 <a href="{{ SITEURL }}/{{ article.next_article.url}}" rel="next" title="next post">
-                    {{ article.next_article.title }} <i class="fa fa-chevron-right"></i>&nbsp;
+                  {{ article.next_article.title }} &rArr;
                 </a>
             </li>
             {% else %}
-            <li class="next disabled">
-                <a href="#">已经是最后一篇</a>
+            <li class="next .am-disabled">
+                已经是最后一篇
             </li>
             {% endif %}
         </ul>
         <div style="clear: both"></div>
     </div>
+    {% endif %}
 
+    {% if 0  %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -105,6 +102,24 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
         Disqus.</a></noscript>
+    {% endif  %}
+<!-- 多说评论框 start -->
+  <div class="ds-thread" id="ds-thread" data-thread-key="" data-title="{{ article.title }}" data-url="{{ SITEURL }}/{{ article.url }}" ></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"rainyim"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
 
 </section>
 {% endblock %}

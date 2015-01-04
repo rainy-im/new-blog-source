@@ -34,6 +34,7 @@ AUTHOR_FEED_RSS = None
 # MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/index.html'
 DEFAULT_PAGINATION = 10
 THEME = "themes/MD"
+THEME = "themes/prose"
 
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
@@ -41,7 +42,7 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 
-TEMPLATE_PAGES = {"/Users/rainy/Projects/Blog/pelican.rainy.im/themes/MD/templates/about.html": 'about/index.html'}
+TEMPLATE_PAGES = {"/Users/rainy/Projects/Blog/pelican.rainy.im/themes/prose/templates/about.html": 'about/index.html'}
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
@@ -49,3 +50,4 @@ TEMPLATE_PAGES = {"/Users/rainy/Projects/Blog/pelican.rainy.im/themes/MD/templat
 # PLUGIN_PATH = "plugins"
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["neighbors"]
+STATIC_PATHS = ["images"]

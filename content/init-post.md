@@ -1,4 +1,4 @@
-Title: init.
+Title: 开篇
 Date: 2014-12-5
 Category: Blog
 Tags: Pelican

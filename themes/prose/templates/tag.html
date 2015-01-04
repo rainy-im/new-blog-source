@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}{{ SITENAME }} - Tag:{{ tag }} {% endblock %}
+
+{% block breadcrumb %}
+<ul class="am-breadcrumb am-breadcrumb-slash">
+    <li><a href="/" title="Home">Home</a></li>
+    <li>
+        <a href="/tags.html" title="tags">
+            Tag
+        </a>
+    </li>
+    <li class="">
+        {{ tag }}
+    </li>
+</ul>
+{% endblock %}

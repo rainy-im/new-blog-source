@@ -1,12 +1,99 @@
-html, body {
-    padding: 0;
-    margin: 0;
-    font: 16px/24px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #000;
+/* ------------------------------------------
+  Reset ♥
+  http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+---------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline;
+  }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display:block;
+  }
+body { line-height:1; }
+ol, ul { list-style:none;  }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing:0; }
+/* remember to define focus styles. Hee Haw */
+:focus { outline:0; }
+
+/* ------------------------------------------
+  @font-face
+---------------------------------------------*/
+@font-face {
+  font-family:'OpenSans';
+    src:url('../fonts/OpenSans-Regular.eot');
+    src:url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Regular.woff') format('woff');
+  font-weight:400;
+  font-style:normal;
+  }
+
+@font-face {
+  font-family:'OpenSans';
+    src:url('../fonts/OpenSans-Italic.eot');
+    src:url('../fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Italic.woff') format('woff');
+  font-weight:400;
+  font-style:italic;
+  }
+
+@font-face {
+  font-family:'OpenSans';
+    src:url('../fonts/OpenSans-Bold.eot');
+    src:url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Bold.woff') format('woff');
+  font-weight:700;
+  font-style:normal;
+  }
+
+@font-face {
+  font-family:'OpenSans';
+    src:url('../fonts/OpenSans-BoldItalic.eot');
+    src:url('../fonts/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-BoldItalic.woff') format('woff');
+  font-weight:700;
+  font-style:italic;
+  }
+
+html,
+body,
+textarea,
+button,
+input {
+  font:16px/20px 'OpenSans', sans-serif;
 }
 
-ol, ul {
-    list-style: none;
+html, body {
+  background:#fff;
+  color:#516066;
+  -webkit-font-smoothing:antialiased;
+  /*
+    font: 16px/24px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+  */
 }
 
 a {
@@ -14,17 +101,14 @@ a {
     cursor: pointer;
     color: #0a6ebd;
 }
-
 a:hover, a:focus {
     text-decoration: none;
     color: #0c7cd5;
 }
-
 .main-container {
     margin: 60px auto;
     margin-bottom: 0px;
 }
-
 p > a > img {
     padding: 4px;
     line-height: 1.846;
@@ -119,13 +203,6 @@ ul.sns > li > a:hover {
     color: #666;
 }
 
-footer#contentinfo {
-    margin-top: 240px;
-    color: #aaa;
-    text-align: center;
-    font-size: 14px;
-}
-
 ul.category-list, ul.tag-list, dl.archive-list {
     margin-top: 20px;
     margin-left: 5px;
@@ -210,6 +287,7 @@ div.end-article {
     padding: 20px;
     color: #db5e63;
     font-weight: 900;
+    font-style: oblique;
 }
 
 div.neighbors > ul.pager > li.prev {
@@ -219,3 +297,67 @@ div.neighbors > ul.pager > li.prev {
 div.neighbors > ul.pager > li.next {
     float: right;
 }
+footer#contentinfo {
+    margin-top: 240px;
+    color: #aaa;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+#content h1 {
+  font-size:26px;
+  margin:15px 0;
+  line-height: 26px;
+  }
+
+#content h2 {
+  font-size:22px;
+  font-weight:700;
+  margin:0 0 15px;
+  padding:0;
+  }
+
+#content h3 {
+  font-size:16px;
+  font-weight:700;
+  margin:10px 0 5px;
+  }
+
+#content h4,
+#content h5,
+#content h6 {
+  font-size:14px;
+  font-weight:700;
+  margin:10px 0 5px;
+  }
+#content p,
+#content span,
+#content ul,
+#content ol,
+#content li {
+  font-size:16px;
+	line-height:1.5em;
+  }
+#content ol,
+#content ul {
+  margin:0 0 15px 30px;
+  }
+#content ol {
+  list-style:decimal;
+  }
+#content ul {
+  list-style:disc;
+  }
+#content blockquote {
+	padding-left:19px;
+  border-left:1px solid #a8afb2;
+  font-style:italic;
+  margin-bottom:20px;
+  }
+
+#content p {
+  margin-bottom:15px;
+  }
+
+

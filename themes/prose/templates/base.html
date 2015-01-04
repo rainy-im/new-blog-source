@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    {% block head %}
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <meta name="author" content="{{AUTHOR}}" />
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
+          title="{{ SITENAME }} Full Atom Feed"/>
+    {% endif %}
+    <link rel="shortcut icon" href="/theme/image/fav-r.png" />
+    <link rel="stylesheet" href="/theme/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="/theme/css/app.css"/>
+
+    <!-- Bootstrap core css 
+    <link rel="stylesheet" href="/theme/css/bootstrap-paper.min.css">
+    <link rel="stylesheet" href="/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/github.css">
+    <link rel="stylesheet" href="/theme/css/style.css">
+    <link rel="stylesheet" href="/theme/css/lightbox.css">
+    -->
+
+    <!-- Jquery before bootstrap.js
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <script src="/theme/js/lightbox.js"></script>
+    -->
+    {% endblock head %}
+</head>
+
+<body >
+<header class="am-g my-head">
+  <div class="am-u-sm-12 am-article">
+    <h1 class="am-article-title">
+      <a href="https://github.com/rainy-im" title="My Github">
+        <img class="avatar" src="/theme/i/avatar.png"/>
+      </a>
+    </h1>
+    <p class="am-article-meta">rainy.im</p>
+  </div>
+</header>
+<hr class="am-article-divider"/>
+<div class="am-g am-g-fixed">
+  <div class="am-u-md-9 am-u-md-push-3">
+    <div class="am-g">
+      <div class="am-u-sm-11 am-u-sm-centered">
+        <div class="am-cf am-article">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+   </div>
+  </div>
+  <div class="am-u-md-3 am-u-md-pull-9 my-sidebar">
+    <div class="am-offcanvas" id="sidebar">
+      <div class="am-offcanvas-bar">
+        <ul class="am-nav">
+          <li><a href="/">首页</a></li>
+          <li><a href="/archives.html">归档</a></li>
+          <li><a href="/categories.html">归类</a></li>
+          <!--<li><a href="/tags.html">标签</a></li>-->
+          <li><a href="http://rainy.im/feeds/all.atom.xml">订阅</a></li>
+          <li class="am-nav-header"></li>
+          <li>
+              <a href="https://github.com/rainy-im" title="Github" alt="Github" class="fa fa-github">Github</a>
+          </li>
+          <li>
+              <a href="/about" title="About me" alt="About me" class="fa fa-graduation-cap">关于</a>
+          </li>
+       </ul>
+      </div>
+    </div>
+  </div>
+  <a href="#sidebar" class="am-btn am-btn-sm am-icon-bars am-show-sm-only my-button" data-am-offcanvas><span class="am-sr-only">侧栏导航</span></a>
+</div>
+
+<footer id='contentinfo' class="my-footer">
+        <p>
+            Powered by <a href="http://getpelican.com/">Pelican</a>,
+            Created by <a href="http://rainy.im">rainy.im</a>.
+        </p>
+</footer>
+<!--[if (gte /theIE 9)|!(IE)]><!-->
+<script src="/theme/js/jquery.min.js"></script>
+<script src="/theme/js/amazeui.min.js"></script>
+<!--<![endif]-->
+<!-- /#contentinfo
+<script type="text/javascript" src="/theme/js/main.js"></script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=39210186" charset="UTF-8"></script>
+-->
+</body>
+</html>
