@@ -34,7 +34,7 @@ Summary: 因为兴趣和对新接触技术的好奇，总结了一下这几年�
 * `Lisp`: 尚未结束的 SICP 之旅；
 * `Android/Java`: 移动移动移动，40w；
 * `Lua`: 失败的移动游戏尝试，尚未结束的语言开发学习之旅；
-* also tried: `CI/Phalcon/Flask/Angular.js/Scrapy/Bootstrap/Amaze UI/Cocos2d-x/Pelican`
+* also tried: CI/Phalcon/Flask/Angular.js/Scrapy/Bootstrap/Amaze UI/Cocos2d-x/Pelican
 
 ### 总结
 
@@ -50,18 +50,3 @@ Summary: 因为兴趣和对新接触技术的好奇，总结了一下这几年�
 4. `并行与数据结构`: 这算是`心理仿真 2.0`；
 5. `Python(3/PyPy)`: 随着时间推移，在众多新秀中，Python 俨然已经成为一名长（老）者，希望可以从 3 和 PyPy 中发现更多生机…；
 6. `Lisp & Lua`: 我对它们很感兴趣，尴尬的是很难找到合适的应用场景，所以暂时只能当做兴趣玩玩了；
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
