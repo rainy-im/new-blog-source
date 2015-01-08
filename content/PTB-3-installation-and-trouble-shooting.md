@@ -1,5 +1,5 @@
 Title: PTB-3 安装手册
-Date: 2015-1-4
+Date: 2015-1-8
 Category: Psychology
 Tags: Matlab, PTB-3, Psychology
 Slug: PTB-3-installation-and-trouble-shooting
