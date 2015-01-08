@@ -66,7 +66,7 @@ PTB-3 到目前为止最新的稳定版本为 [3.0.12](http://psychtoolbox.org/n
 
 > ----- ! PTB - ERROR: SYNCHRONIZATION FAILURE ! ----
 
-具体原因或背后的原理以后再说，解决方法有提示通过`help SyncTrouble`查看原因，（OSX系统中）一般与内核驱动有关，可以通过查看`help PsychtoolboxKernelDriver`寻找解决方案：
+至于具体原因或背后的原理以后再说，解决方法有提示通过`help SyncTrouble`查看原因，（OSX系统中）一般与内核驱动有关，可以通过查看`help PsychtoolboxKernelDriver`寻找解决方案：
 
     :::bash
     cd /System/Library/Extensions/
