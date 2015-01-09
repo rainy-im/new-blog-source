@@ -55,10 +55,11 @@ PTB-3 到目前为止最新的稳定版本为 [3.0.12](http://psychtoolbox.org/n
 解压缩之后通过 Matlab 进入到解压后的目录中的 Psychtoolbox 子目录，执行：
 
     :::matlab
-    % @/path/to/Psychtoolbox-3-PTB_Beta-2014-11-06_V3.0.12/Psychtoolbox 
+    >> cd /path/to/Psychtoolbox-3-PTB_Beta-2014-11-06_V3.0.12/Psychtoolbox 
+
     >> SetupPsychtoolbox
    
-如果没有终止或报错，可以看到最后的 `Enjoy!`，就是安装成功！
+如果没有终止或报错，可以看到最后的 `Enjoy!`，就说明安装成功！
 
 ### 4. 可能遇到的问题与解决方法
 
@@ -70,33 +71,19 @@ PTB-3 到目前为止最新的稳定版本为 [3.0.12](http://psychtoolbox.org/n
 
     :::bash
     cd /System/Library/Extensions/
+
     sudo unzip /PathToPsychtoolbox/Psychtoolbox/PsychHardware/PsychtoolboxKernelDriver64Bit.kext.zip
 
-如果需要删除就的版本或升级则需要：
+如果需要删除旧的版本或升级则需要：
 
     :::bash
     sudo kextunload /System/Library/Extensions/PsychtoolboxKernelDriver.kext
+
     sudo rm -R /System/Library/Extensions/PsychtoolboxKernelDriver.kext
     
 另外 OSX 10.10 需要额外的步骤：
 
     :::bash
     sudo nvram boot-args="kext-dev-mode=1"
+
     reboot
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
