@@ -5,7 +5,7 @@ Tags: Matlab, PTB-3, Psychology
 Slug: PTB-3-installation-and-trouble-shooting
 Authors: rainy
 Keywords: PTB-3, Matlab, 心理学实验工具包, SYNCHRONIZATION FAILURE
-Description: 这几年杂而不精的技术学习之旅
+Description: SYNCHRONIZATION FAILURE
 Summary: Psychtoolbox-3(PTB-3) 是一组 Matlab（或 [Octave](http://www.octave.org/)）的工具包，主要用来编写心理学实验程序。我分别尝试了在 Windows XP 系统的 Matlab 09b、Mac OSX 系统的 Octave 3.8.2 和 Matlab 14b 上安装 PTB-3 并运行了简单的 Demo，记录了一些安装过程中可能遇到的坑及解决方法。
 
 ### 1. 关于 [Psychtoolbox-3](http://psychtoolbox.org/)
