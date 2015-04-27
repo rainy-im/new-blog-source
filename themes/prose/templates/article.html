@@ -64,13 +64,13 @@
 
     <!-- /.entry-content -->
     <hr data-am-widget="divider" style="" class="am-divider am-divider-default"/>
-    <div class="asset-footer am-alert">
+    <div class="asset-footer">
         <div class="panel-heading">
             <h3 class="panel-title">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-非商用-非衍生-保持署名</a>
             </h3>
         </div>
         <div class="panel-body">
-            原文网址：<a href="{{ SITEURL }}/{{ article.url }}">{{ SITEURL }}/{{ article.url }}</a>
+          <h3>原文网址：<a href="{{ SITEURL }}/{{ article.url }}">{{ SITEURL }}/{{ article.url }}</a></h3>
         </div>
     </div>
     {% if 1 %}
@@ -103,7 +103,6 @@
     </div>
     {% endif %}
 
-    {% if 0  %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -120,7 +119,7 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
         Disqus.</a></noscript>
-    {% endif  %}
+    {% if 0  %}
 <!-- 多说评论框 start -->
   <div class="ds-thread" id="ds-thread" data-thread-key="" data-title="{{ article.title }}" data-url="{{ SITEURL }}/{{ article.url }}" ></div>
 <!-- 多说评论框 end -->
@@ -137,5 +136,6 @@ var duoshuoQuery = {short_name:"rainyim"};
   })();
   </script>
 <!-- 多说公共JS代码 end -->
+    {% endif  %}
 </section>
 {% endblock %}
